@@ -15,7 +15,7 @@ import { Route, Routes } from "react-router-dom";
 function App() {
     return (
         <div>
-            <Navbar logged={true}></Navbar>
+            <Navbar logged={false}></Navbar>
             <Routes>
                 <Route path="/" element={<Index></Index>}></Route>
                 <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
