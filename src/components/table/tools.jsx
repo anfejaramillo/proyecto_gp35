@@ -1,27 +1,24 @@
 import UpdateTool from "./updateTool";
-import editar from "./editar.png";
-import eliminar from "./eliminar.png";
+import DeleteTool from "./deleteTool";
 
 function Tools(props) {
     // id={row["id"]}
     // path={props.path}
     // tools={props.tools}
-    let cell = <></>;
+    let tools = [];
+
     if (props.tools && props.tools.length > 0) {
-        props.tools.forEach((element) => {
-            if (element == "update") {
-                cell = (
-                    <img src={editar} alt={"E"} width="20px" className="mx-1" />
-                );
+        props.tools.forEach(function (element) {
+            if (element === "update") {
+                tools.push(<UpdateTool id={props.id} path={props.path} />);
+            }
+
+            if (element === "delete") {
+                tools.push(<DeleteTool id={props.id} path={props.path} />);
             }
         });
     }
-    return (
-        <td>
-            {cell}
-            {/* <img src={eliminar} alt={"E"} width="20px" /> */}
-        </td>
-    );
+    return <td>{tools}</td>;
 }
 
 export default Tools;

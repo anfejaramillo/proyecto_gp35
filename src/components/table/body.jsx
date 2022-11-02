@@ -1,5 +1,5 @@
 import Tools from "./tools";
-
+import Row from "./row";
 function Body(props) {
     //data={props.data}
     //columns={props.columns}
@@ -9,19 +9,12 @@ function Body(props) {
         <tbody>
             {props.data.map(function (row, rowIndex) {
                 return (
-                    <tr>
-                        {props.columns.map(function (column, columnIndex) {
-                            if (columnIndex === 0) {
-                                return <th scope="row">{row[column]}</th>;
-                            }
-                            return <td>{row[column]}</td>;
-                        })}
-                        <Tools
-                            id={row["id"]}
-                            path={props.path}
-                            tools={props.tools}
-                        />
-                    </tr>
+                    <Row
+                        rowData={row}
+                        columns={props.columns}
+                        path={props.path}
+                        tools={props.tools}
+                    />
                 );
             })}
             {/* <tr>

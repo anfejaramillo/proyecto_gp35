@@ -6,9 +6,13 @@ import Footer from "./components/footer";
 import Ejemplos from "./components/ejemplo/EjemplosIndex";
 import ComponenteFuncion from "./components/ejemplo/ComponenteFuncion";
 import ComponenteClase from "./components/ejemplo/ComponenteClase";
+import EjemploHooks from "./components/ejemploHooks";
 import UsuarioIndex from "./components/usuario/usuario";
 import CategoriaIndex from "./components/categoria/categoria";
 import ProductoIndex from "./components/producto/producto";
+import CrearProducto from "./components/producto/crearProducto";
+import ActualizarProducto from "./components/producto/actualizarProducto";
+import EliminarProducto from "./components/producto/eliminarProducto";
 import LoginForm from "./components/usuario/loginform";
 import { Route, Routes } from "react-router-dom";
 
@@ -33,6 +37,10 @@ function App() {
                         path="/ejemplos/componente_clase"
                         element={<ComponenteClase></ComponenteClase>}
                     ></Route>
+                    <Route
+                        path="/ejemplos/hooks"
+                        element={<EjemploHooks></EjemploHooks>}
+                    ></Route>
                 </Route>
                 <Route path="/usuario">
                     <Route
@@ -51,6 +59,22 @@ function App() {
                         path="/producto"
                         element={<ProductoIndex></ProductoIndex>}
                     ></Route>
+                    <Route
+                        path="/producto/create"
+                        element={<CrearProducto></CrearProducto>}
+                    ></Route>
+                    <Route path="/producto/update/">
+                        <Route
+                            path=":idProduct"
+                            element={<ActualizarProducto />}
+                        ></Route>
+                    </Route>
+                    <Route path="/producto/delete/">
+                        <Route
+                            path=":idProduct"
+                            element={<EliminarProducto />}
+                        ></Route>
+                    </Route>
                 </Route>
             </Routes>
             <Footer></Footer>

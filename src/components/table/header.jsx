@@ -1,4 +1,6 @@
 function Header(props) {
+    //props.columns
+    //props.tools
     let tools = undefined;
     if (props.tools && props.tools.length > 0) {
         tools = <th scope="col">Tools</th>;

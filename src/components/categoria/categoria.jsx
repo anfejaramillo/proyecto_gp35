@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 function CategoriaIndex(props) {
     return (
         <div>

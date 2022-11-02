@@ -582,4 +582,15 @@ function getData(url, headers, httpMethod, data) {
     return dataFromServer;
 }
 
-export default getData;
+function getProductById(id) {
+    let result = null;
+    for (let i = 0; i < dataFromServer.length; i++) {
+        if (dataFromServer[i].id.toString() === id.toString()) {
+            result = dataFromServer[i];
+            break;
+        }
+    }
+    return result;
+}
+
+export { getData, getProductById };

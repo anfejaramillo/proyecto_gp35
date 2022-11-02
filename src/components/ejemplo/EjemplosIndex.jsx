@@ -14,6 +14,9 @@ function Ejemplos(props) {
                         Componente de tipo CLASE
                     </Link>
                 </li>
+                <li>
+                    <Link to={"/ejemplos/hooks"}>Ejemplo Hooks</Link>
+                </li>
             </ul>
         </div>
     );

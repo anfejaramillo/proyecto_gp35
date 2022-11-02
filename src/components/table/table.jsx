@@ -6,6 +6,8 @@ function Table(props) {
     //props.data
     //props.path
     //props.columns
+    //props.columnsAlias
+    //props.tools
     return (
         <table class="table">
             <caption>{props.name}</caption>

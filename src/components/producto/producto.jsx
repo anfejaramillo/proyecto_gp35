@@ -1,5 +1,5 @@
 import ProductIndex from "./productIndex";
-import getData from "../../js/getData";
+import { getData } from "../../js/getData";
 
 function ProductoIndex(props) {
     let productos = getData("url", {}, "get", {});
