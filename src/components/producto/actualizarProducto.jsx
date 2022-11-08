@@ -9,9 +9,22 @@ function ActualizarProducto(props) {
     }
     return (
         <div className="mx-auto text-center m-3 p-3">
-            <h2>Pagina: Crear Producto</h2>
+            <h2>Pagina: Actualizar Producto</h2>
             <div className="w-75 mx-auto text-center">
                 <form>
+                    <div class="form-floating mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="idproductfloating"
+                            placeholder="Id Producto"
+                            name="product_id"
+                            required={true}
+                            defaultValue={product.id}
+                            readOnly={true}
+                        />
+                        <label for="idproductfloating">Id producto</label>
+                    </div>
                     <div class="form-floating mb-3">
                         <input
                             type="text"
